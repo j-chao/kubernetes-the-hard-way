@@ -1101,5 +1101,20 @@ $ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/do
 
 ```
 
+View container logs from worker nodes
+```sh
+$ ls /var/log
+```
+
+```sh
+$ systemctl status kube-scheduler
+$ systemctl status kube-proxy
+$ systemctl status kubelet
+
+$ journalctl -u kubelet
+
+$ sudo iptables -t nat -L KUBE-SERVICES
+```
+
 #### References
 - https://github.com/ivanfioravanti/kubernetes-the-hard-way-on-azure
